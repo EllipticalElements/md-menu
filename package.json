@@ -1,0 +1,14 @@
+{
+  "name": "md-menu",
+  "description": "Material design menu component",
+  "version": "1.0.0",
+  "author": "S. Francis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EllipticalElements/md-menu.git"
+  },
+  "dependencies":{
+    "md-ripple":"git+https://github.com/EllipticalElements/md-ripple.git"
+  }
+}
