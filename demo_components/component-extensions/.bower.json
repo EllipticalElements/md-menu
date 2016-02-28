@@ -1,0 +1,57 @@
+{
+  "name": "component-extensions",
+  "description": "prototype extensions/behaviors for web components",
+  "version": "1.0.23",
+  "main": "dist/component-extensions.js",
+  "authors": [
+    "S. Francis"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "prototype",
+    "extensions",
+    "for",
+    "web",
+    "components"
+  ],
+  "homepage": "https://github.com/ellipticaljs/component-extensions",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".gitignore",
+    ".npmignore",
+    "gulpfile.js",
+    "lib",
+    "docs",
+    "index.js",
+    "umd.js",
+    "package.json",
+    "demo",
+    "index.html",
+    "build.json",
+    "bundle.json",
+    ".nvmrc",
+    ".eslintrc",
+    "bin",
+    "CHANGELOG.md",
+    "demos",
+    "bk"
+  ],
+  "dependencies": {
+    "jquery-extensions": "~1.0.0",
+    "elliptical-utils": "~2.0.0"
+  },
+  "_release": "1.0.23",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.23",
+    "commit": "19df9da4ed32edb8b2feaf45062f71422191639b"
+  },
+  "_source": "git://github.com/ellipticaljs/component-extensions.git",
+  "_target": "~1.0.1",
+  "_originalSource": "component-extensions"
+}

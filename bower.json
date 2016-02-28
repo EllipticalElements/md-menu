@@ -1,0 +1,13 @@
+{
+  "name": "gh-pages",
+  "dependencies": {
+    "elliptical-sass": "~1.1.12",
+    "css-docs": "elliptical-css-docs#~1.0.1",
+    "sass-core-icons": "~1.0.4",
+    "mark-down": "elliptical-mark-down#~1.0.5",
+    "sass-md-components": "~1.0.7",
+    "webcomponentsjs": "~0.7.21",
+    "md-menu": "~1.0.0",
+    "md-icons": "~1.0.5"
+  }
+}

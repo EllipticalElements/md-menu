@@ -1,0 +1,26 @@
+hr {
+    margin: 1em 0;
+}
+mark-down{
+    visibility: hidden;
+}
+.tag{
+    color:#E0E0E0;
+}
+.padding{
+    padding:1em;
+}
+
+.demo-box{
+    min-height:500px;
+    width:500px;
+    max-width:100%;
+}
+
+@media only screen and (max-width: 640px) and (min-width: 220px){
+    .demo-box{
+        box-shadow:none !important;
+        min-height:0;
+        margin-bottom:9em;
+    }
+}

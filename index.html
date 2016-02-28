@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Demo</title>
+    <script src="demo_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="stylesheet" href="demo_components/elliptical-sass/dist/elliptical.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="import" href="vulcanized/import.html">
+</head>
+<body>
+<header>
+    <h4>MD-MENU</h4>
+    <h5 class="padding-right hide-for-small">MATERIAL DESIGN</h5>
+</header>
+<section>    
+    <grid-row>
+        <grid-columns class="default-12">
+            <h3>Example</h3>
+            <hr>
+            <div class="demo-box md elevation-1">
+              <md-menu>
+                 <menu-item>
+                    <header><span class="icon-dashboard"></span><a>Dashboard</a></header>
+                 </menu-item>
+                 <menu-item>
+                   <header class="dropdown"><span class="icon-person"></span>Users</header>
+                   <menu-dropdown>
+                       <menu-item><a>Search</a></menu-item>
+                       <menu-item><a>Add New User</a></menu-item>
+                   </menu-dropdown>
+                 </menu-item>
+                 <menu-item>
+                      <header class="dropdown"><span class="icon-shopping-cart"></span>Shop</header>
+                      <menu-dropdown>
+                         <menu-item><a>Product</a></menu-item>
+                         <menu-item><a>Custom</a></menu-item>
+                         <menu-item><a>Image Utility</a></menu-item>
+                      </menu-dropdown>
+                 </menu-item>
+                 <menu-item>
+                      <header><span class="icon-settings"></span><a>Settings</a></header>
+                 </menu-item>
+              </md-menu>
+            </div>    
+            
+            <mark-down class="margin-top two">
+                ``` html
+                <xmp>
+                <div class="demo-box md elevation-1">
+                  <md-menu>
+                    <menu-item>
+                      <header><span class="icon-dashboard"></span><a>Dashboard</a></header>
+                    </menu-item>
+                  <menu-item>
+                    <header class="dropdown"><span class="icon-person"></span>Users</header>
+                    <menu-dropdown>
+                      <menu-item><a>Search</a></menu-item>
+                      <menu-item><a>Add New User</a></menu-item>
+                   </menu-dropdown>
+                   </menu-item>
+                  <menu-item>
+                     <header class="dropdown"><span class="icon-shopping-cart"></span>Shop</header>
+                     <menu-dropdown>
+                       <menu-item><a>Product</a></menu-item>
+                       <menu-item><a>Custom</a></menu-item>
+                       <menu-item><a>Image Utility</a></menu-item>
+                     </menu-dropdown>
+                  </menu-item>
+                  <menu-item>
+                      <header><span class="icon-settings"></span><a>Settings</a></header>
+                  </menu-item>
+                 </md-menu>
+                </div>    
+                </xmp>
+                ```
+            </mark-down>    
+            
+            <h3 class="margin-top two">Documentation</h3>
+            <hr>
+            <h4 class="margin-top two">MD-MENU</h4>
+            <section class="docs margin-top two">
+                <h4>Public Properties</h4>
+                <hr>
+                <flex-box class="space-between full-width row">
+                    <span>disableAnimation</span>
+                    <flex-box class="column">
+                        <span>{Boolean}</span>
+                        <span>disbale animation</span>
+                    </flex-box>
+                    <flex-box class="column last">
+                        <span>default</span>
+                        <span>false</span>
+                    </flex-box>
+                </flex-box>
+                <hr>
+                <flex-box class="space-between full-width row">
+                    <span>closeDrawer</span>
+                    <flex-box class="column">
+                        <span>{Boolean}</span>
+                        <span>close drawer panel on mobile devices</span>
+                    </flex-box>
+                    <flex-box class="column last">
+                        <span>default</span>
+                        <span>false</span>
+                    </flex-box>
+                </flex-box>
+                <hr>
+                <flex-box class="space-between full-width row">
+                    <span>drawerDelay</span>
+                    <flex-box class="column">
+                        <span>{Number}</span>
+                        <span>delay set for clsoing the drawer</span>
+                    </flex-box>
+                    <flex-box class="column last">
+                        <span>default</span>
+                        <span>2250</span>
+                    </flex-box>
+                </flex-box>
+                <hr>
+                <flex-box class="space-between full-width row">
+                    <span>duration</span>
+                    <flex-box class="column">
+                        <span>{Number}</span>
+                        <span>animation duration</span>
+                    </flex-box>
+                    <flex-box class="column last">
+                        <span>default</span>
+                        <span>250</span>
+                    </flex-box>
+                </flex-box>
+                <hr>
+                <flex-box class="space-between full-width row">
+                    <span>easing</span>
+                    <flex-box class="column">
+                        <span>{String}</span>
+                        <span>animation easing</span>
+                    </flex-box>
+                    <flex-box class="column last">
+                        <span>default</span>
+                        <span>linear</span>
+                    </flex-box>
+                </flex-box>
+                <hr>
+                <flex-box class="space-between full-width row">
+                    <span>rippleColor</span>
+                    <flex-box class="column">
+                        <span>{String}</span>
+                        <span>ripple color</span>
+                    </flex-box>
+                    <flex-box class="column last">
+                        <span>default</span>
+                        <span>rgb(153,153,153)</span>
+                    </flex-box>
+                </flex-box>
+                 <hr>
+                <flex-box class="space-between full-width row">
+                    <span>activeRippleColor</span>
+                    <flex-box class="column">
+                        <span>{String}</span>
+                        <span>active ripple color</span>
+                    </flex-box>
+                    <flex-box class="column last">
+                        <span>default</span>
+                        <span>rgb(153,153,153)</span>
+                    </flex-box>
+                </flex-box>
+            </section>
+            <section class="docs margin-top two">
+                <h4>Public Methods</h4>
+                <hr>
+                <flex-box class="space-between full-width row">
+                    <span>showByUrl</span>
+                    <flex-box class="column">
+                        <span>{void}</span>
+                        <span>highlight menu item that matches passed url</span>
+                    </flex-box>
+                    <flex-box class="column last">
+                        <span>params:</span>
+                        <span>{String} url</span>
+                        <span>{Boolean} suppressError</span>
+                    </flex-box>
+                </flex-box>
+            </section>
+            <section class="docs margin-top two">
+            <h4>Public Events</h4>
+            <hr>
+            <flex-box class="space-between full-width row">
+               <span>md.menu.showing</span>
+               <flex-box class="column">
+                   <span>thrown when showing item</span>
+               </flex-box>
+               <flex-box class="column last">
+                   <span></span>
+               </flex-box>
+             </flex-box>
+             <hr>
+            <flex-box class="space-between full-width row">
+               <span>md.menu.show</span>
+               <flex-box class="column">
+                   <span>thrown when item is shown</span>
+               </flex-box>
+               <flex-box class="column last">
+                   <span></span>
+               </flex-box>
+             </flex-box>
+             <hr>
+            <flex-box class="space-between full-width row">
+               <span>md.menu.hiding</span>
+               <flex-box class="column">
+                   <span>thrown when hiding item</span>
+               </flex-box>
+               <flex-box class="column last">
+                   <span></span>
+               </flex-box>
+             </flex-box>
+             <hr>
+            <flex-box class="space-between full-width row">
+               <span>md.menu.hide</span>
+               <flex-box class="column">
+                   <span>thrown when item is hidden</span>
+               </flex-box>
+               <flex-box class="column last">
+                   <span></span>
+               </flex-box>
+             </flex-box>
+             <hr>
+            <flex-box class="space-between full-width row">
+               <span>md.menu.url.404</span>
+               <flex-box class="column">
+                   <span>thrown when no item matches url</span>
+               </flex-box>
+               <flex-box class="column last">
+                   <span></span>
+               </flex-box>
+             </flex-box>
+            </section>   
+           </grid-columns>
+    </grid-row>
+</section>
+<footer>
+    <h5>Demo</h5>
+    <flex-box class="links">
+        <a href="https://github.com/EllipticalElements/md-menu/tree/gh-pages">Demo Source</a>
+        <a href="https://github.com/EllipticalElements/md-menu">Project Home</a>
+    </flex-box>
+</footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../elliptical-polymer-behaviors/component-behavior.html">
+<link rel="import" href="input-behaviors.html">
+
+<dom-module id="md-input">
+    <style></style>
+    <template>
+        <span class="icon-[[icon]]"></span>
+        <input type="[[type]]" placeholder="[[placeholder]]" value="[[value]]">
+        <label class="[[active]]">[[label]]</label>
+    </template>
+</dom-module>
+<script>
+
+    Polymer({
+
+        is: 'md-input',
+
+        behaviors: [Elliptical.ComponentBehavior, Elliptical.MDInputBehavior],
+
+        properties: {
+            label: {
+                type: String,
+                value: ''
+            },
+            placeholder: {
+                type: String,
+                value: ''
+            },
+            type: {
+                type: String,
+                value: 'text'
+            },
+            required: {
+                type: Boolean,
+                value: false
+            },
+            icon: {
+                type: String,
+                value: null
+            },
+            dataId: {
+                type: String,
+                value: null
+            },
+            dataName: {
+                type: String,
+                value: null
+            },
+            dataValue: {
+                type: String,
+                value: null
+            },
+            event: {
+                type: String,
+                value: 'md.input.change'
+            },
+            disabled: {
+                type: Boolean,
+                value: false
+            },
+            readonly: {
+                type: Boolean,
+                value: false
+            }
+        },
+
+        listeners: {},
+
+        ready: function () {
+            this._inputEvents();
+            this._setRequired();
+            this._setValueProp();
+            this._setId();
+            this._setName();
+            this._setLabel();
+            this._setValue();
+            this._setIcon();
+            this._setReadOnly();
+            this._setDisabled();
+        },
+
+        _inputEvents: function () {
+            var self = this;
+            this._event(this.element, 'focus', 'input', function (event) {
+                if (!self.readonly) {
+                    $(this).siblings('label, i').addClass('active');
+                    self.element.find('span').addClass('active');
+                }
+            });
+
+            this._event(this.element, 'blur', 'input', function (event) {
+                var $input = $(this);
+                if ($input.val().length === 0 && $input.attr('placeholder') === '') {
+                    $input.siblings('label, i').removeClass('active');
+                }
+                self.element.find('span').removeClass('active');
+            });
+
+            this._event(this.element, 'change', 'input', function (event) {
+                var $input = $(this);
+                if ($input.val().length === 0 && $input.attr('placeholder') !== '') {
+                    $input.siblings('label, i').addClass('active');
+                    self.element.find('span').addClass('active');
+                }
+                self._resetSemanticState();
+                self._onChange(event);
+            });
+        },
+
+        _setValue: function () {
+            if (this.dataValue && this.dataValue !== undefined) {
+                this.value = this.dataValue;
+                var label = this.element.find('label');
+                label.addClass('active');
+            }
+        },
+
+        _onIconSet: function (span) {
+            span.addClass('prefix');
+        },
+
+        _onChange: function (event) {
+            var element = $(event.currentTarget);
+            var data = {
+                value: element.val(),
+                id: element.attr('id'),
+                name: element.attr('name')
+            };
+            this.element.trigger('md.input.change', data);
+        }
+    });
+
+</script>

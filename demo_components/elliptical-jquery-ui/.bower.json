@@ -1,0 +1,51 @@
+{
+  "name": "elliptical-jquery-ui",
+  "version": "1.11.9",
+  "main": "dist/widget.js",
+  "ignore": [
+    "**/.*",
+    "build",
+    "demos",
+    "external",
+    "tests",
+    ".gitignore",
+    ".npmignore",
+    "gulpfile.js",
+    "lib",
+    "docs",
+    "index.js",
+    "umd.js",
+    "package.json",
+    "demo",
+    "index.html",
+    "build.json",
+    "bundle.json",
+    "build",
+    "Gruntfile.js",
+    "AUTHORS.txt",
+    "CONTRIBUTING.md",
+    ".travis.yml",
+    ".editorconfig",
+    ".gitattributes",
+    ".jscsrc",
+    ".jshintignore",
+    ".jshintrc",
+    ".mailmap",
+    "src",
+    "external",
+    "demos"
+  ],
+  "dependencies": {
+    "jquery-extensions": "~1.0.6"
+  },
+  "homepage": "https://github.com/ellipticaljs/jquery-ui",
+  "_release": "1.11.9",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.11.9",
+    "commit": "decd33f00f0ed9022a0562a27f963b12ca4b0f1f"
+  },
+  "_source": "git://github.com/ellipticaljs/jquery-ui.git",
+  "_target": "~1.11.9",
+  "_originalSource": "elliptical-jquery-ui"
+}
