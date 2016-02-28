@@ -32,7 +32,7 @@ bower install md-menu --save
 
 ```
 
-##demo and docs
+##Demo and docs
 
 http://EllipticalElements.github.io/md-menu/
 
