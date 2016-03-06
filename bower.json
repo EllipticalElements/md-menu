@@ -1,6 +1,6 @@
 {
   "name": "md-menu",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": [
     "S. Francis"
   ],
@@ -42,7 +42,7 @@
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0",
     "elliptical-polymer-behaviors": "~1.0.11",
-    "sass-md-components":"~1.0.7",
+    "sass-md-components":"~1.1.0",
     "md-ripple": "~1.0.0"
   },
   "devDependencies": {
