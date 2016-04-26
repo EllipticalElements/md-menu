@@ -88,6 +88,7 @@
             this._collapseEvents();
             this._getDrawer();
             this._menuEvents();
+            this._fireEvent('ready',{});
         },
 
         /**
@@ -441,7 +442,7 @@
             var parent = target.parents(this._dropdownSelector);
             if (parent[0]) {
                 header = target.parents(this._dropdownSelector).prev(this._headerSelector);
-                var collapsible = this._getCollapsibleFromTarget(this._headerSelector);
+                var collapsible = this._getCollapsibleFromTarget(header);
                 this._onCollapse(collapsible, header, undefined);
                 this._dispatchItemClick(target, undefined);
             } else {
