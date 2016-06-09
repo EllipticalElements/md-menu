@@ -399,7 +399,7 @@
         _dispatchHeaderClick: function (target, event) {
             var applyRipple = !(target.hasClass('active'));
             this.element.find('.active').removeClass('active');
-            var expanded = this.element.find(this._expandClass);
+            var expanded = this.element.find('.' + this._expandClass);
             if (expanded[0] && !(expanded[0] === target[0])) {
                 this._hide(expanded);
             }
