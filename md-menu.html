@@ -431,7 +431,7 @@
             this._showByTarget(target);
         } else {
         if (!suppressError) {
-        this._fireEvent('url.404', {url: url});
+        this._fireEvent('url-404', {url: url});
         }
 
         }
@@ -469,7 +469,7 @@
      */
     _fireEvent:function(evt,data){
         if(!data) data=this._eventData();
-        this.element.trigger('md.menu.' + evt, data);
+        this.element.trigger('md-menu-' + evt, data);
     },
         /*==========================================
          PUBLIC METHODS
