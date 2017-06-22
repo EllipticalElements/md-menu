@@ -469,7 +469,7 @@
      */
     _fireEvent:function(evt,data){
         if(!data) data=this._eventData();
-        this.element.trigger('md-menu-' + evt, data);
+        this.fire('md-menu-' + evt, data);
     },
         /*==========================================
          PUBLIC METHODS
